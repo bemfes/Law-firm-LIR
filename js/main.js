@@ -359,14 +359,27 @@ const mutObserverThird = new MutationObserver((mutations) => {
 mutObserverThird.observe(inputIconThird, {
     childList: !0
 })
-initMap();
+
+let ninthSection = document.querySelector('.ninth-section');
+function mapObserve(entries) {
+    if (entries[0].isIntersecting) {
+        initMap()
+        mapObserver.unobserve(ninthSection)
+
+    }
+}
+let mapObserver = new IntersectionObserver(mapObserve, {threshold: 0, rootMargin: "-150px"})
+
+mapObserver.observe(ninthSection)
+
+
+
 
 async function initMap() {
     // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
     await ymaps3.ready;
 
     const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker} = ymaps3;
-
     // Иницилиазируем карту
     const map = new YMap(
         // Передаём ссылку на HTMLElement контейнера
