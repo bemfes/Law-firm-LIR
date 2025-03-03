@@ -7027,7 +7027,7 @@ const marker = new YMapMarker(
 // Добавьте маркер на карту
 map.addChild(marker);
 
-// Добавьте произвольную HTML-разметку внутрь содержимого маркера
+// Добавьте произвольную HTML-разметку внутрь содержимого маркера.
 content.classList.add('marker')
 content.innerHTML = '<img src="icons/map-pin.svg">'
 
