@@ -585,13 +585,14 @@ canvas {
 }
 .second-section__left {
   width: 25%;
-  /* background: url(../images/human-back.png) center/cover no-repeat; */
   background-image: url("../images/human-back.png");
-
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
   background-image: image-set(
       url("../images/human-back.avif") type("image/avif"),     
       url("../images/human-back.webp") type("image/webp"),      
-      url("../images/human-back.png"),     
+      url("../images/human-back.png")     
     );
 }
 .second-section__right {
