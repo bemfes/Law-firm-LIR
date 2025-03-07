@@ -10,7 +10,7 @@
   }
 .noscript {
     position: absolute;
-    z-index: 120;
+    z-index: 420;
     top: 0;
     left: 0;
     display: flex;
