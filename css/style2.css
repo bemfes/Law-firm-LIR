@@ -21,21 +21,21 @@ a[href^="tel"] {
 
 @font-face {
   font-family: "Montserrat-Light";
-  src: url(../fonts/Montserrat-Light.ttf);
+  src: url(../fonts/Montserrat-Light.woff);
   font-display: swap;
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "Montserrat-Light";
-  src: url(../fonts/Montserrat-Light.ttf);
+  src: url(../fonts/Montserrat-Light.woff);
   font-display: swap;
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "Montserrat-Light-Italic";
-  src: url(../fonts/Montserrat-LightItalic.ttf);
+  src: url(../fonts/Montserrat-LightItalic.woff);
   font-display: swap;
   font-style: normal;
   font-weight: 300;
