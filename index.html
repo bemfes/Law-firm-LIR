@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <!-- ИЗМЕНИ НАЗВАНИЯ СТИЛЕЙ И СКРИПТА НА MIN ПОТОМ -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/preloader.css" />
     <link rel="stylesheet" media="print" onload="this.media='all'; this.onload=null" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style2.css">
     <script defer src="js/just-validate.min.js"></script>
     <script defer src="js/inputmask.min.js"></script>
     <script defer src="js/swiper-bundle.min.js"></script>
@@ -104,6 +104,11 @@
         <div class="preloader__circle"></div>
     </div>
     <section class="first-section" id="main">
+        <picture>
+            <source class="first-section__mobile-img" srcset="images/first-back-mobile.avif" type="image/avif">
+            <source class="first-section__mobile-img" srcset="images/first-back-mobile.webp" type="image/webp">
+            <img class="first-section__mobile-img" fetchpriority="high" src="images/first-back-mobile.png" alt="">
+        </picture>
         <div class="border-bottom">
             <div class="nav__container container">
                     <a tabindex="0" class="logo__link" href="index.html">
@@ -156,24 +161,24 @@
                 <div class="first-section__statue">
                     <picture>
                         <source class="first-section__img" srcset="images/statue-1.webp" type="image/webp">
-                        <img class="first-section__img" src="images/statue-1.png" alt="statue"></picture>
+                        <img fetchpriority="high" class="first-section__img" src="images/statue-1.png" alt="statue"></picture>
                     <div class="first-section__pictures">
                         <picture>
                             <source class="first-section__list-1" srcset="images/list-1.webp" type="image/webp">
-                            <img class="first-section__list-1" src="images/list-1.png" alt="list">
+                            <img fetchpriority="high" class="first-section__list-1" src="images/list-1.png" alt="list">
                         </picture>
                         <picture>
                             <source class="first-section__list-2" srcset="images/list-2.webp" type="image/webp">
-                            <img class="first-section__list-2" src="images/list-2.png" alt="list">
+                            <img fetchpriority="high" class="first-section__list-2" src="images/list-2.png" alt="list">
                         </picture>
                     </div>
                     <picture>
                         <source class="first-section__list-3" srcset="images/list-3.webp" type="image/webp">
-                        <img class="first-section__list-3" src="images/list-3.png" alt="list">
+                        <img fetchpriority="high" class="first-section__list-3" src="images/list-3.png" alt="list">
                     </picture>
                     <picture>
                         <source class="first-section__list-4" srcset="images/list-4.webp" type="image/webp">
-                        <img class="first-section__list-4" src="images/list-4.png" alt="list">
+                        <img fetchpriority="high" class="first-section__list-4" src="images/list-4.png" alt="list">
                     </picture>
                     
                 </div>
