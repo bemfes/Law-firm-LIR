@@ -26,13 +26,7 @@ a[href^="tel"] {
   font-style: normal;
   font-weight: 300;
 }
-@font-face {
-  font-family: "Montserrat-Light";
-  src: url(../fonts/Montserrat-Light.woff);
-  font-display: swap;
-  font-style: normal;
-  font-weight: 300;
-}
+
 @font-face {
   font-family: "Montserrat-Light-Italic";
   src: url(../fonts/Montserrat-LightItalic.woff);
@@ -42,7 +36,7 @@ a[href^="tel"] {
 }
 @font-face {
   font-family: "Optimal-Regular";
-  src: url(../fonts/Optimal-Regular.ttf);
+  src: url(../fonts/Optimal.woff);
   font-display: swap;
   font-style: normal;
   font-weight: 400;
