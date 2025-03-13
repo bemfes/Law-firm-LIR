@@ -36,7 +36,7 @@ a[href^="tel"] {
 }
 @font-face {
   font-family: "Optimal-Regular";
-  src: url(../fonts/Optimal-Regular.woff);
+  src: url(../fonts/Optimal.woff);
   font-display: swap;
   font-style: normal;
   font-weight: 400;
