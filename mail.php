@@ -32,8 +32,6 @@ foreach ( $_POST as $key => $value ) {
     // Настройки вашей почты
     // Настройка отправки со своей почты себе
     $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
-    $mail->Username   = '2anastasiia@mail.ru'; // Логин на почте
-    $mail->Password   = '5vrp5La4sn33G8Eqnx8a'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
   
