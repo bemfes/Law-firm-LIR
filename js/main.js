@@ -181,17 +181,7 @@ new window.JustValidate('.form__modal', {
         },
     },
     submitHandler: function(thisForm) {
-        let formData = new FormData(thisForm);
-        let xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    console.log('Отправлено')
-                }
-            }
-        }
-        xhr.open('POST', 'mail.php', !0);
-        xhr.send(formData);
+        
         thisForm.reset();
         if (inputIconModalFirst.classList.contains('input-icon-red-modal')) {
             inputIconModalFirst.classList.remove('input-icon-red-modal')
@@ -233,17 +223,7 @@ new window.JustValidate('.first-section__form', {
         },
     },
     submitHandler: function(thisForm) {
-        let formData = new FormData(thisForm);
-        let xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    console.log('Отправлено')
-                }
-            }
-        }
-        xhr.open('POST', 'mail.php', !0);
-        xhr.send(formData);
+        
         thisForm.reset();
         if (inputIconFirst.classList.contains('input-icon-red')) {
             inputIconFirst.classList.remove('input-icon-red')
@@ -273,17 +253,7 @@ new window.JustValidate('.eight-section__form', {
         },
     },
     submitHandler: function(thisForm) {
-        let formData = new FormData(thisForm);
-        let xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    console.log('Отправлено')
-                }
-            }
-        }
-        xhr.open('POST', 'mail.php', !0);
-        xhr.send(formData);
+        
         thisForm.reset();
         if (inputIconSecond.classList.contains('input-icon-red-second')) {
             inputIconSecond.classList.remove('input-icon-red-second')
@@ -329,17 +299,7 @@ new window.JustValidate('.ninth-section__form', {
         },
     },
     submitHandler: function(thisForm) {
-        let formData = new FormData(thisForm);
-        let xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    console.log('Отправлено')
-                }
-            }
-        }
-        xhr.open('POST', 'mail.php', !0);
-        xhr.send(formData);
+        
         thisForm.reset();
         if (inputIconThird.classList.contains('input-icon-red')) {
             inputIconThird.classList.remove('input-icon-red')
