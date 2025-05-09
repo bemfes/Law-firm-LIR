@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/preloader.css" />
+    <link rel="stylesheet" media="print" onload="this.media='all'; this.onload=null" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <link fetchpriority="high" rel="preload" href="fonts/Optimal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <script defer src="js/just-validate.min.js"></script>
+    <script defer src="js/inputmask.min.js"></script>
+    <script defer src="js/swiper-bundle.min.js"></script>
+    <script defer src="https://api-maps.yandex.ru/v3/?apikey=ee80ee73-b1b2-411a-91cf-878e2d10754d&lang=ru_RU"></script>
+    <script defer src="js/main.min.js"></script>
+    <title>L | R - юридическая фирма</title>
+    <meta name="description" content="Юридическая фирма LIR решит все ваши правовые вопросы">
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="icons/favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/favicon.ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://">
+    <meta property="og:image" content="images/human.png">
+    <meta property="og:title" content="L | R - юридическая фирма">
+    <meta property="og:description" content="Юридическая фирма LIR решит все ваши правовые вопросы">
+</head>
+<body class="body-scroll">
+    <noscript class="noscript">
+        <p class="noscript__text">
+            Похоже, ваш браузер не поддерживает JavaScript. Для работы сайта, пожалуйста, включите поддержку JavaScript в 
+            настройках вашего браузера или откройте сайт в другом браузере, который поддерживает JavaScript.
+        </p>
+    </noscript>
+    <div class="overlay hidden"></div>
+    <div class="modal modal-greetings hidden">
+        
+        <div class="modal__wrapper">
+            <button tabindex="0" class="modal__close modal__close-greet">&times;</button>
+            <div class="modal__item">
+                <div class="modal__content">
+                    <form method="post" action="" class="modal__desc form__modal">
+                        <h2 tabindex="0" class="modal__title title-2">ОСТАВЬТЕ ЗАЯВКУ <span class="span-brown">МЫ С ВАМИ СВЯЖЕМСЯ</span></h2>
+                        <div class="input-icon-modal input-icon-modal-first">
+                            <input tabindex="0" name="name" required data-validate-field="name" class="input modal__input" type="text" placeholder="Ваше имя">
+                        </div>
+                        <div class="input-icon-modal input-icon-modal-second">
+                            <input tabindex="0" name="tel" required data-validate-field="tel" class="input modal__input modal__input-phone" type="tel" placeholder="+7 (___) ___ __ __">
+                        </div>
+                        <div class="input-icon-modal input-icon-modal-third">
+                            <input tabindex="0" name="email" required data-validate-field="email" class="input modal__input" type="email" placeholder="Ваш email">
+                        </div>
+                        <div class="block-align">
+                            <button tabindex="0" type="submit" class="btn-main modal__btn">ОТПРАВИТЬ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal hidden modal_success modal_success-click">
+        <div class="modal__wrapper modal__wrapper_success">
+            <button tabindex="0" class="modal__close modal__close_success">&times;</button>
+            <div class="modal__item modal__item_success">
+                <div class="modal__content modal__content_success">
+                    <div class="modal__desc modal__desc_success">
+                        <h2 tabindex="0" class="modal__title modal__title_success title-2">ЗАЯВКА <span class="span-brown">УСПЕШНО</span> ОТПРАВЛЕНА</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal_success modal_subs hidden">
+        <div class="modal__wrapper modal__wrapper_success">
+            <button tabindex="0" class="modal__close modal__close_success">&times;</button>
+            <div class="modal__item modal__item_success">
+                <div class="modal__content modal__content_success">
+                    <div class="modal__desc modal__desc_success">
+                        <h2 tabindex="0" class="modal__title modal__title_subs title-2">ПОДПИСКА <span class="span-brown">УСПЕШНО</span> ОФОРМЛЕНА</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preloader">
+        <div class="preloader__circle"></div>
+        <div class="preloader__circle"></div>
+        <div class="preloader__circle"></div>
+    </div>
+    <section class="first-section" id="main">
+        <picture>
+            <source class="first-section__mobile-img" srcset="images/first-back-mobile.avif" type="image/avif">
+            <source class="first-section__mobile-img" srcset="images/first-back-mobile.webp" type="image/webp">
+            <img class="first-section__mobile-img" fetchpriority="high" src="images/first-back-mobile.png" alt="">
+        </picture>
+        <div class="border-bottom">
+            <div class="nav__container container">
+                    <a aria-label="logo lir" tabindex="0" class="logo__link" href="index.html">
+                        <svg class="logo">
+                            <use xlink:href="icons/sprite.svg#logo_(2)"></use>
+                        </svg>
+                    </a>
+            
+                    <nav class="nav">
+
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <span class="nav__item-span"></span>
+                                <a href="#main" class="nav__item-link desc-2">Главная</a>
+                            </li>
+                            <li class="nav__item">
+                                <span class="nav__item-span"></span>
+                                <a href="#service" class="nav__item-link desc-2">Услуги</a>
+                            </li>
+                            <li class="nav__item">
+                                <span class="nav__item-span"></span>
+                                <a href="#experts" class="nav__item-link desc-2">Сопровождение</a>
+                            </li>
+                            <li class="nav__item">
+                                <span class="nav__item-span"></span>
+                                <a href="#blog" class="nav__item-link desc-2">Полезное</a>
+                            </li>
+                            <li class="nav__item">
+                                <span class="nav__item-span"></span>
+                                <a href="#about" class="nav__item-link desc-2">О компании</a>
+                            </li>
+                            <li class="nav__item">
+                                <span class="nav__item-span"></span>
+                                <a href="#contacts" class="nav__item-link desc-2">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="nav__phone-hmg">
+                        <p tabindex="0" class="nav__phone phone">+7 (999) 890 09 98</p>
+                        <div class="hamburger">
+                            <span class="hamburger__span-1"></span>
+                            <span class="hamburger__span-2"></span>
+                            <span class="hamburger__span-3"></span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="first-section__main container">
+            <div class="first-section__img-block">
+                <div class="first-section__statue">
+                    <picture>
+                        <source class="first-section__img" srcset="images/statue-1.webp" type="image/webp">
+                        <img fetchpriority="high" class="first-section__img" src="images/statue-1.png" alt="statue"></picture>
+                    <div class="first-section__pictures">
+                        <picture>
+                            <source class="first-section__list-1" srcset="images/list-1.webp" type="image/webp">
+                            <img fetchpriority="high" class="first-section__list-1" src="images/list-1.png" alt="list">
+                        </picture>
+                        <picture>
+                            <source class="first-section__list-2" srcset="images/list-2.webp" type="image/webp">
+                            <img fetchpriority="high" class="first-section__list-2" src="images/list-2.png" alt="list">
+                        </picture>
+                    </div>
+                    <picture>
+                        <source class="first-section__list-3" srcset="images/list-3.webp" type="image/webp">
+                        <img fetchpriority="high" class="first-section__list-3" src="images/list-3.png" alt="list">
+                    </picture>
+                    <picture>
+                        <source class="first-section__list-4" srcset="images/list-4.webp" type="image/webp">
+                        <img fetchpriority="high" class="first-section__list-4" src="images/list-4.png" alt="list">
+                    </picture>
+                    
+                </div>
+            </div>
+            <h1 tabindex="0" class="title-1 first-section__title">РЕШИМ ЛЮБОЙ ПРАВОВОЙ ВОПРОС</h1>
+            <p tabindex="0" class="first-section__desc desc-1">Помощь в решении любого правового вопроса в вашу пользу</p>
+            <div class="consultation first-section__consultation">
+                <p tabindex="0" class="consultation__text">НУЖНА КОНСУЛЬТАЦИЯ?</p>
+        
+                <form method="post" action="" class="form first-section__form consultation__call">
+                    
+                    <div class="input-icon input-icon-first">
+                        <input aria-label="телефонный номер" required name="phone-1" data-validate-field="tel" type="tel" class="input first-section__input consultation__input" placeholder="+7 (___) ___ __ __">
+                    </div>
+                    <button class="btn-main btn-main_call first-section__btn" type="submit">ЗАКАЗАТЬ ЗВОНОК</button>
+                </form>
+                
+            </div>
+            <div class="numbers first-section__numbers">
+                <div tabindex="0" class="numbers__item">
+                    <p  class="numbers__digit">89%</p>
+                    <p class="numbers__desc desc-2">Выигранных дел</p>
+                </div>
+                <div tabindex="0" class="numbers__item">
+                    <p  class="numbers__digit">34</p>
+                    <p class="numbers__desc desc-2">Сотрудника в штате</p>
+                </div>
+                <div tabindex="0" class="numbers__item">
+                    <p class="numbers__digit">18</p>
+                    <p class="numbers__desc desc-2">Лет на рынке</p>
+                </div>
+            </div>
+        </div>
+        <div class="first-section__frame"></div>
+
+    </section>
+    <section class="second-section">
+        <picture>
+            <source class="second-section__img" srcset="images/human.webp" type="image/webp">
+            <img loading="lazy" class="second-section__img" src="images/human.png" alt="human">
+        </picture>
+        <div class="second-section__left"></div>
+        <div class="second-section__right"></div>
+        <div class="second-section__desc cytate">
+           <div class="cytate__wrapper">
+                <picture>
+                    <source class="cytate__quote cytate__quote_left" srcset="images/left-quote.webp" type="image/webp">
+                    <img loading="lazy" class="cytate__quote cytate__quote_left" src="images/left-quote.png" alt="quote">
+                </picture>
+                <picture>
+                    <source class="cytate__quote cytate__quote_right" srcset="images/right-quote.webp" type="image/webp">
+                    <img loading="lazy" class="cytate__quote cytate__quote_right" src="images/right-quote.png" alt="quote">
+                </picture>
+                
+                <p tabindex="0" class="cytate__word cytate__word_first">Слово руководителя</p>
+                <h2 tabindex="0" class="title-2 cytate__title cytate__title_second">ПОТОМУ ЧТО НАМ <span class="span-brown">НЕ ВСЕ РАВНО</span></h2>
+                <p tabindex="0" class="cytate__text desc-1">Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму участие в переговорах, окажу помощь на стадии досудебного урегулирования споров.</p>
+                <p tabindex="0" class="cytate__author title-3">ЖЕМЧУЖИН ВАСИЛИЙ ЯКОВЛЕВИЧ</p>
+                <p tabindex="0" class="cytate__author-job">Генеральный директор</p>
+                <picture>
+                    <source class="second-section__sign-img" srcset="images/sign.webp" type="image/webp">
+                    <img loading="lazy" class="second-section__sign-img" src="images/sign.png" alt="sign">
+                </picture>
+                
+                
+           </div>
+        </div>
+    </section>
+    <section class="third-section" id="service">
+        <picture>
+            <source class="third-section__img" srcset="images/scales.webp" type="image/webp">
+            <img loading="lazy" class="third-section__img" src="images/scales.png" alt="scales">
+        </picture>
+       
+        <div class="third-section__main container">
+            <div class="third-section__desc">
+                <p tabindex="0" class="third-section__text desc-1">Наши преимущества</p>
+                <h3 tabindex="0" class="third-section__title title-2">Почему <span class="span-brown">выбирают</span> нас</h3>
+            </div>
+            <div class="pluses third-section__pluses">
+                <div class="pluses__item">
+                    <svg class="pluses__icon">
+                        <use xlink:href="icons/sprite.svg#clock"></use>
+                    </svg>
+                    <p tabindex="0" class="pluses__title title-3">круглосуточная поддержка</p>
+                    <p tabindex="0" class="pluses__desc desc-2">Звонки по любым вопросам в удобное для вас время. Мы всегда рядом</p>
+                </div>
+                <div class="pluses__item">
+                    <svg class="pluses__icon">
+                        <use xlink:href="icons/sprite.svg#bag"></use>
+                    </svg>
+                    <p tabindex="0" class="pluses__title title-3">Высокая экспертность</p>
+                    <p tabindex="0" class="pluses__desc desc-2">Наши специалисты постоянно улучшают свои навыки и изучают новые подходы</p>
+            </div>
+            
+            
+            <div class="pluses__item">
+                    <svg class="pluses__icon">
+                        <use xlink:href="icons/sprite.svg#horse"></use>
+                    </svg>
+                    <p tabindex="0" class="pluses__title title-3">думаем на два шага вперед</p>
+                    <p tabindex="0" class="pluses__desc desc-2">Звонки по любым вопросам в удобное для вас время. Мы всегда рядом</p>
+            </div>
+            
+            
+            <div class="pluses__item">
+                    <svg class="pluses__icon">
+                        <use xlink:href="icons/sprite.svg#book"></use>
+                    </svg>
+                    <p tabindex="0" class="pluses__title title-3">Знания – наша сила</p>
+                    <p tabindex="0" class="pluses__desc desc-2">Звонки по любым вопросам в удобное для вас время. Мы всегда рядом</p>
+            </div>
+            </div>
+            <div class="block-align">
+                <button class="btn-main btn-main_call btn-to-first-section">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>
+            
+            
+        </div>
+    </section>
+    <section class="fourth-section" id="experts">
+        <div class="fourth-section__main container">
+            <div class="fourth-section__left">
+                <div class="cytate__wrapper cytate__wrapper_fourth">
+                    <p tabindex="0" class="cytate__word cytate__word_fourth">Наша команда</p>
+                    <h2 tabindex="0" class="title-2 cytate__title cytate__title_fourth">НАШИ СПЕЦИАЛИСТЫ ЗНАЮТ <span class="span-brown">СВОЕ ДЕЛО</span></h2>
+                    <p tabindex="0" class="cytate__text cytate__text_fourth desc-1">Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму участие в переговорах, окажу помощь на стадии досудебного урегулирования споров.</p>
+                    <button class="btn-main btn-main_call btn-to-first-section">ЗАКАЗАТЬ ЗВОНОК</button>
+               </div>
+            </div>
+            <div class="fourth-section__right">
+                <div class="workers__item">
+                    <div tabindex="0" class="workers__img-item workers__img-item_up">
+                        <picture>
+                            <source class="workers__img" srcset="images/expert-1.webp" type="image/webp">
+                            <img loading="lazy" class="workers__img" src="images/expert-1.png" alt="специалист Кирилл Александрович">
+                        </picture>
+                    </div>
+                    <p tabindex="0" class="workers__title title-3">КИРИЛЛ АЛЕКСАНДРОВИЧ</p>
+                    <p tabindex="0" class="workers__desc-up desc-2">27 лет стажа</p>
+                </div>
+                <div class="workers__item">
+                    <p tabindex="0" class="workers__title title-3">ЛЮБОВЬ ЮРЬЕВНА</p>
+                    <p tabindex="0" class="workers__desc-down desc-2">18 лет стажа</p>
+                    <div tabindex="0"  class="workers__img-item">
+                        <picture>
+                            <source class="workers__img" srcset="images/expert-2.webp" type="image/webp">
+                            <img loading="lazy" class="workers__img" src="images/expert-2.png" alt="специалист Лариса Юрьевна">
+                        </picture>
+                    </div>
+                    
+                </div>
+                <div class="workers__item">
+                    <div tabindex="0" class="workers__img-item workers__img-item_up">
+                        <picture>
+                            <source class="workers__img" srcset="images/expert-3.webp" type="image/webp">
+                            <img loading="lazy" class="workers__img" src="images/expert-3.png" alt="специалист Иван Васильевич">
+                        </picture>
+                    </div>
+                    <p tabindex="0" class="workers__title title-3">ИВАН ВАСИЛЬЕВИЧ</p>
+                    <p tabindex="0" class="workers__desc-up desc-2">17 лет стажа</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fifth-section">
+        <div class="fifth-section__back">
+            <picture>
+                <source class="fifth-section__img" srcset="images/choose-back (2).webp" type="image/webp">
+                <img loading="lazy" class="fifth-section__img" src="images/choose-back (2).png" alt="background img">
+            </picture>
+            
+        </div>
+        <div class="fifth-section__main container">
+            <div class="fifth-section__desc">
+                <p tabindex="0" class="fifth-section__text desc-1">Нам доверяют</p>
+                <h3 tabindex="0" class="fifth-section__title title-2">ОНИ <span class="span-brown-light">ВЫБРАЛИ</span> НАС</h3>
+            </div>
+            <div class="fifth-section__icons choose">
+                <div class="choose__item">
+                    <img loading="lazy" tabindex="0" class="choose__svg" src="icons/cooper (3).svg" alt="mini cooper logo">
+                    <p tabindex="0" class="choose__title title-3">mini cooper</p>
+                </div>
+                <div class="choose__item">
+                    <img loading="lazy" tabindex="0" class="choose__svg" src="icons/sber.svg" alt="sber logo">
+                    <p tabindex="0" class="choose__title title-3">сбер</p>
+                </div>
+                <div class="choose__item">
+                    <img loading="lazy" tabindex="0" class="choose__svg" src="icons/skolkovo.svg" alt="skolkovo logo">
+                    <p tabindex="0" class="choose__title title-3">сколково</p>
+                </div>
+                <div class="choose__item">
+                    <img loading="lazy" tabindex="0" class="choose__svg" src="icons/psych.svg" alt="psychology logo">
+                    <p tabindex="0" class="choose__title title-3">psychology</p>
+                </div>
+                <div class="choose__item">
+                    <img loading="lazy" tabindex="0" class="choose__svg" src="icons/valorant (3).svg" alt="valorant logo">
+                    <p tabindex="0" class="choose__title title-3">valorant</p>
+                </div>
+                <div class="choose__item">
+                    <img loading="lazy" tabindex="0" class="choose__svg" src="icons/first.svg" alt="first channel logo">
+                    <p tabindex="0" class="choose__title title-3">первый канал</p>
+                </div>
+
+            </div>
+            <button class="btn-main btn-main_show">ПОКАЗАТЬ ЕЩЕ</button>
+
+        </div>
+        
+    </section>
+    <section class="sixth-section" id="about">
+        <div class="sixth-section__main container">
+            <div class="sixth-section__desc">
+                <p tabindex="0" class="sixth-section__text desc-1">О нас говорят</p>
+                <h3 tabindex="0" class="sixth-section__title title-2"><span class="span-brown">ОТЗЫВЫ</span> НАШИХ КЛИЕНТОВ</h3>
+            </div>            
+                    <div class="sixth-section__slider-position">
+                        <button class="swiper-button-next sixth-section__slider-btn">&rarr;</button>
+                        <button class="swiper-button-prev sixth-section__slider-btn">&larr;</button>
+                        <div class="swiper-container sixth-section__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    
+                                        <picture>
+                                            <source class="slider__item-right-quote" srcset="images/right-quote.webp" type="image/webp">
+                                            <img loading="lazy" class="slider__item-right-quote" src="images/right-quote.png" alt="quote">
+                                        </picture>
+                                        <div class="slider__item-filler"></div>
+                                        <div class="slider__item-content">
+                                            <div class="slider__item-align">
+                                            <div class="slider__item-circle">
+                                                
+                                                <picture>
+                                                    <source class="slider__item-img" srcset="images/review.webp" type="image/webp">
+                                                    <img loading="lazy" class="slider__item-img" src="images/review.png" alt="girl">
+                                                </picture>
+                                            </div>
+                
+                                            </div>
+                                            <p class="slider__item-desc desc-italics">Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму участие в переговорах, окажу помощь на стадии досудебного урегулирования споров.</p>
+                                            <p class="slider__item-title title-3">ЮЛИЯ ВОРОБЬЕВА</p>
+                                            <p class="slider__item-job desc-2">Директор компании “Воробьева и ко”</p>
+                
+                                        </div>
+                                        <div class="slider__item-filler slider__item-filler_bottom"></div>
+                                        
+                                        <picture>
+                                            <source class="slider__item-left-quote" srcset="images/left-quote.webp" type="image/webp">
+                                            <img loading="lazy" class="slider__item-left-quote" src="images/left-quote.png" alt="quote">
+                                        </picture>
+                                        <div class="slider__item-frame"></div>
+                                    
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source class="slider__item-right-quote" srcset="images/right-quote.webp" type="image/webp">
+                                        <img loading="lazy" class="slider__item-right-quote" src="images/right-quote.png" alt="quote">
+                                    </picture>
+                                    <div class="slider__item-filler"></div>
+                                    <div class="slider__item-content">
+                                        <div class="slider__item-align">
+                                        <div class="slider__item-circle">
+                                            
+                                            <picture>
+                                                <source class="slider__item-img" srcset="images/review.webp" type="image/webp">
+                                                <img loading="lazy" class="slider__item-img" src="images/review.png" alt="girl">
+                                            </picture>
+                                        </div>
+            
+                                        </div>
+                                        <p class="slider__item-desc desc-italics">Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму участие в переговорах, окажу помощь на стадии досудебного урегулирования споров.</p>
+                                        <p class="slider__item-title title-3">ЕЛЕНА МИРОВСКАЯ</p>
+                                        <p class="slider__item-job desc-2">Директор компании “Воробьева и ко”</p>
+            
+                                    </div>
+                                    <div class="slider__item-filler slider__item-filler_bottom"></div>
+                                    <picture>
+                                        <source class="slider__item-left-quote" srcset="images/left-quote.webp" type="image/webp">
+                                        <img loading="lazy" class="slider__item-left-quote" src="images/left-quote.png" alt="quote">
+                                    </picture>
+                                    <div class="slider__item-frame"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source class="slider__item-right-quote" srcset="images/right-quote.webp" type="image/webp">
+                                        <img loading="lazy" class="slider__item-right-quote" src="images/right-quote.png" alt="quote">
+                                    </picture>
+                                    <div class="slider__item-filler"></div>
+                                    <div class="slider__item-content">
+                                        <div class="slider__item-align">
+                                        <div class="slider__item-circle">
+                                            
+                                            <picture>
+                                                <source class="slider__item-img" srcset="images/review.webp" type="image/webp">
+                                                <img loading="lazy" class="slider__item-img" src="images/review.png" alt="girl">
+                                            </picture>
+                                        </div>
+            
+                                        </div>
+                                        <p class="slider__item-desc desc-italics">Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму участие в переговорах, окажу помощь на стадии досудебного урегулирования споров.</p>
+                                        <p class="slider__item-title title-3">ЕКАТЕРИНА МИШИНА</p>
+                                        <p class="slider__item-job desc-2">Директор компании “Воробьева и ко”</p>
+            
+                                    </div>
+                                    <div class="slider__item-filler slider__item-filler_bottom"></div>
+                                    <picture>
+                                        <source class="slider__item-left-quote" srcset="images/left-quote.webp" type="image/webp">
+                                        <img loading="lazy" class="slider__item-left-quote" src="images/left-quote.png" alt="quote">
+                                    </picture>
+                                    <div class="slider__item-frame"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source class="slider__item-right-quote" srcset="images/right-quote.webp" type="image/webp">
+                                        <img loading="lazy" class="slider__item-right-quote" src="images/right-quote.png" alt="quote">
+                                    </picture>
+                                    
+                                    <div class="slider__item-filler"></div>
+                                    <div class="slider__item-content">
+                                        <div class="slider__item-align">
+                                        <div class="slider__item-circle">
+                                            
+                                            <picture>
+                                                <source class="slider__item-img" srcset="images/review.webp" type="image/webp">
+                                                <img loading="lazy" class="slider__item-img" src="images/review.png" alt="girl">
+                                            </picture>
+                                        </div>
+            
+                                        </div>
+                                        <p class="slider__item-desc desc-italics">Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму участие в переговорах, окажу помощь на стадии досудебного урегулирования споров.</p>
+                                        <p class="slider__item-title title-3">МАРИЯ РУБИНА</p>
+                                        <p class="slider__item-job desc-2">Директор компании “Воробьева и ко”</p>
+            
+                                    </div>
+                                    <div class="slider__item-filler slider__item-filler_bottom"></div>
+                                    <picture>
+                                        <source class="slider__item-left-quote" srcset="images/left-quote.webp" type="image/webp">
+                                        <img loading="lazy" class="slider__item-left-quote" src="images/left-quote.png" alt="quote">
+                                    </picture>
+                                    <div class="slider__item-frame"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="swiper-pagination"></div>
+        
+    </section>
+    <section class="seventh-section container" id="blog">
+        <div class="seventh-section__desc">
+            <div class="cytate__wrapper">
+                <p tabindex="0" class="cytate__word cytate__word_seventh">Наш блог</p>
+                <h2 tabindex="0" class="title-2 cytate__title"><span class="span-brown">ПОЛЕЗНО</span> ЗНАТЬ</h2>
+            </div>
+            <button class="btn-main btn-main_read-more">ЧИТАТЬ БОЛЬШЕ</button>
+        </div>
+        <div class="article seventh-section__article">
+            <div class="article__item">
+                
+                <picture>
+                    <source class="article__img" srcset="images/article-1.webp" type="image/webp">
+                    <img loading="lazy" tabindex="0" class="article__img" src="images/article-1.png" alt="Статуя богини правосудия">
+                </picture>
+                <div class="article__desc">
+                    <p tabindex="0" class="article__date desc-2">15 апреля</p>
+                    <p tabindex="0" class="article__title title-3">КАК ИСПОЛЬЗОВАТЬ ЗАКОН В СВОЮ ПОЛЬЗУ?</p>
+                    <button class="btn-main btn-main_read">ЧИТАТЬ</button>
+
+                </div>
+            </div>
+            <div class="article__item">
+                <picture>
+                    <source class="article__img" srcset="images/article-2.webp" type="image/webp">
+                    <img loading="lazy" tabindex="0" class="article__img" src="images/article-2.png" alt="бюст ученого в библиотеке">
+                </picture>
+                <div class="article__desc">
+                    <p tabindex="0" class="article__date desc-2">09 апреля</p>
+                    <p tabindex="0" class="article__title title-3">БИБЛИОТЕКА ЮРИСТОВ. ЧтО ПОЧИТАТЬ?</p>
+                    <button class="btn-main btn-main_read">ЧИТАТЬ</button>
+
+                </div>
+            </div>
+            <div class="article__item">
+                <picture>
+                    <source class="article__img" srcset="images/article-3.webp" type="image/webp">
+                    <img loading="lazy" tabindex="0" class="article__img" src="images/article-3.png" alt="Человек пишет что-то на бумаге">
+                </picture>
+                <div class="article__desc">
+                    <p tabindex="0" class="article__date desc-2">06 марта</p>
+                    <p tabindex="0" class="article__title title-3">НА ЧТО ОБРАТИТЬ ВНИМАНИЕ В ДОКУМЕНТАХ?</p>
+                    <button class="btn-main btn-main_read">ЧИТАТЬ</button>
+
+                </div>
+            </div>
+            <div class="article__item">
+                <picture>
+                    <source class="article__img" srcset="images/article-4.webp" type="image/webp">
+                    <img loading="lazy" tabindex="0" class="article__img" src="images/article-4.png" alt="судейский молоток, лежащий на подставке">
+                </picture>
+                <div class="article__desc">
+                    <p tabindex="0" class="article__date desc-2">23 февраля</p>
+                    <p tabindex="0" class="article__title title-3">ЗАЛОГ УСПЕШНЫХ ДЕЛ НАШИХ ЮРИСТОВ</p>
+                    <button class="btn-main btn-main_read">ЧИТАТЬ</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="eight-section">
+        <div class="eight-section__main container">
+            <p tabindex="0" class="eight-section__desc-1 desc-2">Будьте в курсе</p>
+            <h4 tabindex="0" class="eight-section__title title-2"><span class="span-brown">ПОДПИШИТЕСЬ</span> НА НАШИ НОВОСТИ</h4>
+            <p tabindex="0" class="eight-section__desc-2 desc-2">Чтобы всегда быть в курсе дел и обновлении законов. </p>
+            <form method="post" action="" class="eight-section__subs subscribe eight-section__form">
+                <div class="input-icon input-icon-second">
+                    <input required name="email-1" type="email" data-validate-field="email" class="input subscribe__input" placeholder="Ваш email">
+                </div>
+                <button type="submit" class="btn-main btn-main_subs">ПОДПИСАТЬСЯ</button>
+            </form>
+
+        </div>
+    </section>
+    <section class="ninth-section" id="contacts">
+        <div class="ninth-section__left">
+            <div aria-label="карта с изображением местоположения фирмы" tabindex="0" id="map" class="ninth-section__map"></div>
+        </div>
+        <div class="ninth-section__right">
+            <picture>
+                <source class="ninth-section__img" srcset="images/map-back.webp" type="image/webp">
+                <img loading="lazy" class="ninth-section__img" src="images/map-back.png" alt="background img">
+            </picture>
+            
+        </div>
+        <div class="ninth-section__main">
+            <div class="cytate__wrapper cytate__wrapper_ninth">
+                <p tabindex="0" class="cytate__word cytate__word_ninth">На связи с нами</p>
+                <h2 tabindex="0" class="ninth-section__title title-2 cytate__title"><span class="span-brown-light">КОНТАКТНАЯ</span> ИНФОРМАЦИЯ</h2>
+            </div>
+            <div class="ninth-section__contacts contacts">
+                <div class="contacts__phone">
+                    <p tabindex="0" class="contacts__phone-word contacts__text">ТЕЛЕФОН</p>
+                    <p tabindex="0" class="contacts__phone-number contacts__text">+7 (999) 890 09 98</p>
+                </div>
+                <div class="contacts__mail">
+                    <p tabindex="0" class="contacts__mail-word contacts__text">ПОЧТА</p>
+                    <p tabindex="0" class="contacts__mail-number contacts__text">info@ya.ru</p>
+                </div>
+            </div>
+            <div class="ninth-section__adress adress">
+                <p tabindex="0" class="adress__word contacts__text">АДРЕС</p>
+                <p tabindex="0" class="adress__number contacts__text">МОСКВА, УЛ. АРБАТ, Д. 1</p>
+            </div>
+            <div class="consultation ninth-section__consultation">
+                <p tabindex="0" class="consultation__text ninth-section__consult-text">НУЖНА КОНСУЛЬТАЦИЯ?</p>
+                <form method="post" action="" class="consultation__call ninth-section__consult-call ninth-section__form">
+                    <div class="input-icon input-icon-third">
+                        <input aria-label="телефонный номер" required name="phone-2" data-validate-field="tel" type="tel" class="input consultation__input ninth-section__input" placeholder="+7 (___) ___ __ __">
+                    </div>
+                    <button type="submit" class="btn-main btn-main_call ninth-section__btn">ЗАКАЗАТЬ ЗВОНОК</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__main container">
+            <p tabindex="0" class="footer__text">© Все права защищены 2024</p>
+        </div>
+    </footer>
+
+</body>
+</html>
